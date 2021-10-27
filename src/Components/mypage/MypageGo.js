@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
-import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -10,12 +9,6 @@ import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import "./a.css";
-
-const StyledTableDiv = styled.div`
-  width: 70vw;
-  margin-left: 4vw;
-  position: absolute;
-`;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,9 +37,7 @@ function intersection(a, b) {
   return a.filter((value) => b.indexOf(value) !== -1);
 }
 
-const Mypage_go = (props) => {
-  const { download } = props;
-
+const MypageGo = (props) => {
   const classes = useStyles();
   const [checked, setChecked] = React.useState([]);
   const [left, setLeft] = React.useState([0, 1, 2, 3]);
@@ -184,4 +175,4 @@ const Mypage_go = (props) => {
   );
 };
 
-export default Mypage_go;
+export default MypageGo;

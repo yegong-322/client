@@ -15,20 +15,19 @@ import HelpPage from "./pages/HelpPage";
 import KipPage from "./pages/KipPage";
 import RankPage from "./pages/RankPage";
 
-import A_chPage from "./pages/A_chPage";
-import A_ch_otPage from "./pages/A_ch_otPage";
+import AChPage from "./pages/AChPage";
+import AChOtPage from "./pages/AChOtPage";
 
-import A_ch_qusPage from "./pages/A_ch_qusPage";
-import A_ch_introPage from "./pages/A_ch_introPage";
+import AChQusPage from "./pages/AChQusPage";
+import AChIntroPage from "./pages/AChIntroPage";
 
-import Mypage_inforPage from "./pages/Mypage_inforPage";
-import Mypage_memoPage from "./pages/Mypage_memoPage";
-import Mypage_goPage from "./pages/Mypage_goPage";
-import Join_changePage from "./pages/Join_changePage";
+import MypageInforPage from "./pages/MypageInforPage";
+import MypageMemoPage from "./pages/MypageMemoPage";
+import MypageGoPage from "./pages/MypageGoPage";
+import JoinChangePage from "./pages/JoinChangePage";
 
-import MyA_chPage from "./pages/MyA_chPage";
-import MyA_ch2Page from "./pages/MyA_ch2Page";
-import MyA_ch_videoPage from "./pages/MyA_ch_videoPage";
+import MyAChPage from "./pages/MyAChPage";
+import MyAChVideoPage from "./pages/MyAChVideoPage";
 
 import GuidePage from "./pages/GuidePage";
 
@@ -58,19 +57,18 @@ const App = () => {
         <Route path='/kip' exact={true} component={KipPage} />
         <Route path='/rank' exact={true} component={RankPage} />
 
-        <Route path='/A_ch_qus' exact={true} component={A_ch_qusPage} />
-        <Route path='/A_ch_intro' exact={true} component={A_ch_introPage} />
-        <Route path='/A_ch' exact={true} component={A_chPage} />
-        <Route path='/A_ch_ot' exact={true} component={A_ch_otPage} />
+        <Route path='/A_ch_qus' exact={true} component={AChQusPage} />
+        <Route path='/A_ch_intro' exact={true} component={AChIntroPage} />
+        <Route path='/A_ch' exact={true} component={AChPage} />
+        <Route path='/A_ch_ot' exact={true} component={AChOtPage} />
 
-        <Route path='/Mypage_infor' exact={true} component={Mypage_inforPage} />
-        <Route path='/Mypage_memo' exact={true} component={Mypage_memoPage} />
-        <Route path='/Mypage_go' exact={true} component={Mypage_goPage} />
-        <Route path='/Join_change' exact={true} component={Join_changePage} />
+        <Route path='/Mypage_infor' exact={true} component={MypageInforPage} />
+        <Route path='/Mypage_memo' exact={true} component={MypageMemoPage} />
+        <Route path='/Mypage_go' exact={true} component={MypageGoPage} />
+        <Route path='/Join_change' exact={true} component={JoinChangePage} />
 
-        <Route path='/MyA_ch' exact={true} component={MyA_chPage} />
-        <Route path='/MyA_ch2' exact={true} component={MyA_ch2Page} />
-        <Route path='/MyA_ch_video' exact={true} component={MyA_ch_videoPage} />
+        <Route path='/MyA_ch' exact={true} component={MyAChPage} />
+        <Route path='/MyA_ch_video' exact={true} component={MyAChVideoPage} />
 
         <Route path='/guide' exact={true} component={GuidePage} />
       </StyledAppDiv>

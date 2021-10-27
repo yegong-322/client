@@ -1,18 +1,10 @@
 import React from "react";
 import { Typography, CssBaseline, Container } from "@material-ui/core";
-import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import TreeView from "@material-ui/lab/TreeView";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import TreeItem from "@material-ui/lab/TreeItem";
-
-
-const StyledTableDiv = styled.div`
-  width: 70vw;
-  margin-left: 4vw;
-  position: absolute;
-`;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,8 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Mypage_memo = (props) => {
-  const { download } = props;
+const MypageMemo = (props) => {
   const classes = useStyles();
 
   return (
@@ -85,4 +76,4 @@ const Mypage_memo = (props) => {
   );
 };
 
-export default Mypage_memo;
+export default MypageMemo;

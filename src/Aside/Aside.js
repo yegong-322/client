@@ -1,23 +1,16 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import TungstenIcon from '@mui/icons-material/Tungsten';
-import LooksIcon from '@mui/icons-material/Looks';
-import LightbulbIcon from '@mui/icons-material/Lightbulb';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
-import FilterDramaIcon from '@mui/icons-material/FilterDrama';
-import EventNoteIcon from '@mui/icons-material/EventNote';
-import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
-import './Aside.css';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import "./Aside.css";
 
 function Aside() {
   const [state, setState] = React.useState({
@@ -25,7 +18,10 @@ function Aside() {
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
       return;
     }
 
@@ -34,13 +30,18 @@ function Aside() {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
-      role="presentation"
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      role='presentation'
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['많이 들은 영상 1', '많이 들은 영상 2', '많이 들은 영상 3', '많이 들은 영상 4'].map((text, index) => (
+        {[
+          "많이 들은 영상 1",
+          "많이 들은 영상 2",
+          "많이 들은 영상 3",
+          "많이 들은 영상 4",
+        ].map((text, index) => (
           <ListItem button key={text}>
             <ArrowForwardIosIcon />
             <ListItemText primary={text} />
@@ -49,20 +50,22 @@ function Aside() {
       </List>
       <Divider />
       <List>
-        {['내가 설정한 영상 1', '내가 설정한 영상 2', '내가 설정한 영상 3'].map((text, index) => (
-          <ListItem button key={text}>
-            <ArrowForwardIosIcon />
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        {["내가 설정한 영상 1", "내가 설정한 영상 2", "내가 설정한 영상 3"].map(
+          (text, index) => (
+            <ListItem button key={text}>
+              <ArrowForwardIosIcon />
+              <ListItemText primary={text} />
+            </ListItem>
+          )
+        )}
       </List>
     </Box>
   );
 
   return (
     <div>
-      <FontAwesomeIcon icon={faBookOpen} color="#9bcee5" />
-      {['책갈피'].map((anchor) => (
+      <FontAwesomeIcon icon={faBookOpen} color='#9bcee5' />
+      {["책갈피"].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
           <Drawer
@@ -114,7 +117,7 @@ export default Aside;
 // import React, { useState } from 'react';
 // import { Button } from '@material-ui/core';
 // import MenuIcon from '@mui/icons-material/Menu';
-// import './Aside.css';  
+// import './Aside.css';
 // import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -129,7 +132,7 @@ export default Aside;
 //   return(
 //       <div className="header">
 //               <ul className="header-wrapper">
-//                   <li><MenuIcon onClick={()=>toggleMenu()}></MenuIcon></li>                    
+//                   <li><MenuIcon onClick={()=>toggleMenu()}></MenuIcon></li>
 //                   <li><FontAwesomeIcon icon={faBookOpen} color="#9bcee5" /></li>
 //                   <li>
 //                       <Button

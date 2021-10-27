@@ -33,41 +33,36 @@ const Login = () => {
     axios.get("/");
   }, []);
 
-  const [value, setValue] = React.useState("female");
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-
   return (
     <div className={classes.root}>
-        <Grid item xs={5}>
-          <Paper className={classes.paper2}>
-            <form className={classes.root} noValidate autoComplete='off'>
-              <TextField
-                id='standard-multiline-flexible'
-                label='ID'
-                multiline
-                rowsMax={4}
-              />
-            </form>
+      <Grid item xs={5}>
+        <Paper className={classes.paper2}>
+          <form className={classes.root} noValidate autoComplete='off'>
+            <TextField
+              id='standard-multiline-flexible'
+              label='ID'
+              multiline
+              rowsMax={4}
+            />
+          </form>
 
-            <form className={classes.root} noValidate autoComplete='off'>
-              <TextField
-                id='standard-multiline-flexible'
-                label='Password'
-                multiline
-                rowsMax={2}
-              />
-            </form>
-            <div className={classes.root}>
-              <Button variant='contained' color='secondary'>
-                LOGIN
-              </Button>
-            </div>
-          </Paper>
-        </Grid>
+          <form className={classes.root} noValidate autoComplete='off'>
+            <TextField
+              id='standard-multiline-flexible'
+              label='Password'
+              multiline
+              rowsMax={2}
+            />
+          </form>
+          <div className={classes.root}>
+            <Button variant='contained' color='secondary'>
+              LOGIN
+            </Button>
+          </div>
+        </Paper>
+      </Grid>
     </div>
   );
 };
+
 export default Login;

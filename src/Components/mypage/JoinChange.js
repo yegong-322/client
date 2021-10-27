@@ -9,7 +9,6 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import Paper from "@material-ui/core/Paper";
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
@@ -48,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Join_change = () => {
+const JoinChange = () => {
   const classes = useStyles();
 
   return (
@@ -138,4 +137,4 @@ const Join_change = () => {
   );
 };
 
-export default Join_change;
+export default JoinChange;

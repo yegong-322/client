@@ -4,7 +4,7 @@ import { nanoid } from "nanoid";
 import NoteList from "./NoteList";
 import axios from "axios";
 
-const Mypage_memo = () => {
+const MypageMemo = () => {
   axios
     .post("http://localhost:5000/api/memos/write", {
       memo_text: "test memo 제발 되길",
@@ -61,4 +61,4 @@ const Mypage_memo = () => {
   );
 };
 
-export default Mypage_memo;
+export default MypageMemo;

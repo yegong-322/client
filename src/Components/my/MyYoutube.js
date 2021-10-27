@@ -1,7 +1,7 @@
 import React from "react";
 
-const My_youtube = () => {
+const MyYoutube = () => {
   return <div></div>;
 };
 
-export default My_youtube;
+export default MyYoutube;

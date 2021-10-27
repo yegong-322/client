@@ -1,12 +1,10 @@
 import React from "react";
 import { Typography, CssBaseline, Container } from "@material-ui/core";
-import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import ReactPlayer from "react-player";
 //Q&A
 import Portal from "@material-ui/core/Portal";
 import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
 import Rating from "@material-ui/lab/Rating";
 import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
 import SentimentDissatisfiedIcon from "@material-ui/icons/SentimentDissatisfied";
@@ -14,22 +12,6 @@ import SentimentSatisfiedIcon from "@material-ui/icons/SentimentSatisfied";
 import SentimentSatisfiedAltIcon from "@material-ui/icons/SentimentSatisfiedAltOutlined";
 import SentimentVerySatisfiedIcon from "@material-ui/icons/SentimentVerySatisfied";
 import Box from "@material-ui/core/Box";
-
-
-const StyledTableDiv = styled.div`
-  width: 70vw;
-  margin-left: 4vw;
-  position: absolute;
-`;
-
-const StyledRating = withStyles({
-  iconFilled: {
-    color: "#ff6d75",
-  },
-  iconHover: {
-    color: "#ff3d47",
-  },
-})(Rating);
 
 const customIcons = {
   1: {
@@ -74,8 +56,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MyA_ch_video = (props) => {
-  const { download } = props;
+const MyAChVideo = (props) => {
   const classes = useStyles();
   const [show, setShow] = React.useState(false);
   const container = React.useRef(null);
@@ -160,4 +141,4 @@ const MyA_ch_video = (props) => {
   );
 };
 
-export default MyA_ch_video;
+export default MyAChVideo;

@@ -1,6 +1,5 @@
 import React from "react";
 import { Typography, CssBaseline, Grid, Container } from "@material-ui/core";
-import styled from "styled-components";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -13,8 +12,6 @@ import Slide from "@material-ui/core/Slide";
 import PropTypes from "prop-types";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Box from "@material-ui/core/Box";
-//정렬방식
-import AutorenewIcon from "@material-ui/icons/Autorenew";
 
 function CircularProgressWithLabel(props) {
   return (
@@ -44,12 +41,6 @@ CircularProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-const StyledTableDiv = styled.div`
-  width: 70vw;
-  margin-left: 4vw;
-  position: absolute;
-`;
-
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: "flex",
@@ -65,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     "& > * + *": {
-      marginLeft: theme.spacing(23.3),
+      marginLeft: theme.spacing(23),
     },
   },
 }));
@@ -74,22 +65,7 @@ function TransitionUp(props) {
   return <Slide {...props} direction='up' />;
 }
 
-const MyA_ch = (props) => {
-  const { download } = props;
-
-  /*체크박스*/
-  const [checked, setChecked] = React.useState(true);
-
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-    setState({ ...state, [event.target.name]: event.target.checked });
-  };
-  /*정렬방식 조정 슬라이드*/
-  const [state, setState] = React.useState({
-    checkedA: true,
-    checkedB: true,
-  });
-
+const A_ch = (props) => {
   const [open, setOpen] = React.useState(false);
   const [transition, setTransition] = React.useState(undefined);
 
@@ -102,14 +78,12 @@ const MyA_ch = (props) => {
     setOpen(false);
   };
 
-  //open->yes / handleClick -> handleClick_2 / handleClose -> handleClose_2
   //퍼센트
   const classes = useStyles();
-  const [progress, setProgress] = React.useState(100);
-  const [progress_2, setProgress_2] = React.useState(90);
-  const [progress_3, setProgress_3] = React.useState(70);
-  const [progress_4, setProgress_4] = React.useState(10);
-  const [progress_5, setProgress_5] = React.useState(0);
+  const [progress] = React.useState(100);
+  const [progress_2] = React.useState(90);
+  const [progress_3] = React.useState(70);
+  const [progress_5] = React.useState(0);
 
   return (
     <div align='center'>
@@ -128,7 +102,7 @@ const MyA_ch = (props) => {
           style={{
             display: "flex",
             justifyContent: "flex-end",
-            paddingRight: "10%",
+            paddingRight: "8%",
           }}
         >
           <Checkbox
@@ -139,23 +113,24 @@ const MyA_ch = (props) => {
           />
           <Grid item>
             <Button variant='contained' color='primary'>
+              <a href='http://localhost:3000/A_ch_intro'>소개</a>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button variant='outlined' color='primary'>
+              <a href='http://localhost:3000/A_ch_ot'>OT</a>
+            </Button>
+          </Grid>
+
+          <Grid item>
+            <Button variant='contained' color='primary'>
               메모장
             </Button>
           </Grid>
-          <Grid>
-            <AutorenewIcon fontSize='large' />
-          </Grid>
-          {/* <Switch
-                        checked={state.checkedB}
-                        onChange={handleChange}
-                        color="primary"
-                        name="checkedB"
-                        inputProps={{ 'aria-label': 'primary checkbox' }}
-                    /> */}
         </Grid>
       </div>
 
-      <Container style={{ marginleft: "10%" }}>
+      <Container>
         <Typography
           component='div'
           style={{
@@ -266,12 +241,12 @@ const MyA_ch = (props) => {
             <CircularProgressWithLabel size={40} value={progress} />
             <CircularProgressWithLabel size={40} value={progress} />
             <CircularProgressWithLabel size={40} value={progress_2} />
-            <CircularProgressWithLabel size={40} value={progress_4} />
+            <CircularProgressWithLabel size={40} value={progress_3} />
           </div>
         </Typography>
       </Container>
 
-      <Container style={{ marginleft: "10%" }}>
+      <Container>
         <Typography
           component='div'
           style={{
@@ -393,5 +368,5 @@ const MyA_ch = (props) => {
     </div>
   );
 };
-//Typography 네모 박스, Fab&Button 추가 버튼, snackbar 플러스 버튼 눌렀을 때
-export default MyA_ch;
+
+export default A_ch;
